@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Supershape.js</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="Supershape.js visualizes the 3D super formula with three.js." />
+		<meta name="keywords" content="supershape, superformula, three.js, supershape.js, generative design" />
+		<link rel="canonical" href="http://supershape.ahoi.in/" />
+		<style type="text/css">
+			#container { position: absolute;top:0px;bottom:0px;left:0px;right:0px;overflow:hidden;  }
+			.info { position: absolute;top:10px;left:310px;overflow:hidden;color:white;font: 12px 'Lucida Grande', sans-serif; width:200px; line-height: 20px;}
+			.info a {color: white;text-decoration: none;text-transform: uppercase;}
+			.dg.a, .dg.a .close-button {width:300px !important;}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<div class="info">Supershape.js demonstrates the visual output of the <a href="http://paulbourke.net/geometry/supershape3d/" target="_blank">3D Superformula</a> with <a href="https://github.com/mrdoob/three.js/" target="_blank">Three.js</a>. Press 'p' for a screenshot and 'f' for fullscreen mode. Get the <a href="http://supershape.ahoi.in/supershapejs.zip" target="_blank">code</a>.</div>
+	</body>
+</html>
+<script src="lib/dat.gui.min.js"></script>	
+<script src="lib/three.js/Three.js"></script>
+<script src="lib/three.js/Detector.js"></script>
+
+<script src="lib/three.js/Stats.js"></script>
+<script src="lib/threex/THREEx.WindowResize.js"></script>
+<script src="lib/threex/THREEx.FullScreen.js"></script>
+<script src="lib/threex/THREEx.screenshot.js"></script>
+
+
+<script src="lib/three.js/ShaderExtras.js"></script>
+<script src="lib/three.js/postprocessing/EffectComposer.js"></script>
+<script src="lib/three.js/postprocessing/RenderPass.js"></script>
+<script src="lib/three.js/postprocessing/ShaderPass.js"></script>
+<script src="lib/three.js/postprocessing/MaskPass.js"></script>	
+
+
+<script src="js/variables.js" type="text/javascript"></script>
+<script src="js/objects.js" type="text/javascript"></script>
+<script src="js/eventHandler.js" type="text/javascript"></script>
+<script src="js/setup.js" type="text/javascript"></script>
+<script src="js/gui.js" type="text/javascript"></script>	
+<script type="text/javascript">
+	initApp();
+</script>
