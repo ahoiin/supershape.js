@@ -198,9 +198,6 @@ meshObject.prototype.getScene = function () {
 };
 meshObject.prototype.createMeshObject = function () {
     geometry = new THREE.Geometry();
-    geometry.computeFaceNormals();
-    geometry.computeVertexNormals();
-    geometry.computeCentroids();
     geometry.dynamic = true;
     step = 0.05;
     var q = parseInt(2 * Math.PI / step + 1.3462);
@@ -246,6 +243,9 @@ meshObject.prototype.createMeshObject = function () {
             geometry.faces.push(new THREE.Face4(d, c, b, a))
         }
     }
+    geometry.computeFaceNormals();
+    geometry.computeVertexNormals();
+    geometry.computeCentroids();
 };
 meshObject.prototype.createMeshMaterial = function () {
     material = new THREE.MeshLambertMaterial();
