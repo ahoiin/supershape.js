@@ -69,7 +69,7 @@ function drawGui() {
     f3.add(guiElement, "zoom").name("zoom").min(1).max(1100).listen().onChange(function (b) {
         camera.position.z = b;
     });
-    f3.add(guiElement,"texture",["plane", "dotted","lined"]).listen().onChange(function (b) { 
+    f3.add(guiElement,"texture",["plane", "dotted","lined"]).onChange(function (b) { 
     	if(b == 'dotted') { cleareScenes(); object = new particleObject(rotX, rotY); }
     	if(b == 'lined') { cleareScenes(); object = new lineObject(rotX, rotY); }
     	if(b == 'plane') { cleareScenes(); object = new meshObject(rotX, rotY); }
